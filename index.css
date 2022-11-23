@@ -1,0 +1,172 @@
+@import url(https://fonts.google.com/specimen/Inter);
+
+:root {
+  --orange: hsl(35, 77%, 62%);
+  --soft: hsl(5, 85%, 63%);
+  --Off-white: hsl(36, 100%, 99%);
+  --Grayish-blue: hsl(233, 8%, 79%);
+  --Dark-grayish-blue: hsl(236, 13%, 42%);
+  --Very-dark-blue: hsl(240, 100%, 5%);
+  --Font-size-paragraph: 15px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "Roboto", sans-serif;
+}
+body {
+  padding-left: 15rem;
+  padding-right: 15rem;
+}
+.nav-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+}
+.nav-link ul {
+  list-style: none;
+
+  gap: 30px;
+  display: flex;
+}
+.nav-link ul li {
+  text-decoration: none;
+}
+.nav-link input {
+  display: none;
+}
+
+.main-menu {
+  margin-top: 30px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 4fr 2fr;
+}
+.first-side {
+  margin-bottom: 20px;
+}
+.first-side-image img {
+  max-width: 100%;
+}
+.first-side-text {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  margin-top: 30px;
+}
+.first-side-text p {
+  font-size: 10px;
+}
+.first-side-text button {
+  margin-top: 20px;
+  background-color: var(--soft);
+  border: none;
+  color: white;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-transform: uppercase;
+}
+.myStyle {
+  color: white;
+}
+#openSidebarMenu:checked ~ .navbar ul {
+  left: 0%;
+}
+/* #sidebar li {
+  position: fixed;
+  top: 30px;
+  left: -100%;
+  background-color: black;
+  height: 100vh;
+  width: 100%;
+  display: block;
+  text-align: center;
+} */
+.second-side {
+  background-color: black;
+  color: white;
+  padding: 20px;
+}
+.second-text {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid rgba(245, 245, 245, 0.9);
+}
+.second-text p {
+  color: var(--Grayish-blue);
+  font-size: 10px;
+  margin-top: 10px;
+}
+.second-text h1 {
+  color: var(--orange);
+}
+.second-text h3 {
+  margin-top: 20px;
+  font-size: var(--Font-size-paragraph);
+}
+.box,
+.mixBox {
+  display: flex;
+  gap: 10px;
+  margin-top: 25px;
+}
+.mixBox img {
+  width: 100px;
+}
+@media screen and (max-width: 480px) {
+  .navbar ul {
+    position: fixed;
+    top: 30px;
+    left: 100%;
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+  body {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .main-menu {
+    display: block;
+  }
+  .first-side-text {
+    display: block;
+  }
+  .box {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1284px) {
+  body {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .nav-link ul li {
+    margin: 48px 0;
+  }
+  .nav-link ul li a {
+    color: brown;
+  }
+  .nav-link .open {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .nav-link .open {
+    display: none;
+  }
+}
+@media screen and (max-width: 48px) and (min-width: 1180px) {
+  body {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
